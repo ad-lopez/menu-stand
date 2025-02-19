@@ -1,12 +1,24 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
-    /*background-color: #f8f8f8;*/
-    background-image: url('../img/fondo.jpg');
-    background-size: 100%;
     margin: 0;
-    padding: 20px;
+    padding: 40px;
 }
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .menu {
     max-width: 600px;
     margin: auto;
@@ -14,38 +26,75 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0.9;
+    text-align: center;
 }
-h1{
-    font-size: 2.3em;
+
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: #000000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
+
 .logo {
     margin-top: 5px;
-    width: 75px;
-    height: 75%;
+    width: 60px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .store-name {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: bold;
     margin-top: 5px;
 }
+
 .category {
     margin-top: 20px;
     font-weight: bold;
     font-size: 1.2em;
     text-align: center;
 }
+
 .category img {
     width: 50px;
-    height: 50px;
+    height: 50%;
     display: block;
     margin: 10px auto;
 }
+
 .menu-item {
     display: flex;
     justify-content: space-between;
     padding: 10px;
     border-bottom: 1px solid #ddd;
 }
+
 .menu-item:last-child {
     border-bottom: none;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media p {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    font-size: 2em;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #0073e6; /* Cambia este color según tu preferencia */
 }
